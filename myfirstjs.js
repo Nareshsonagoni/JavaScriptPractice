@@ -78,4 +78,5 @@ console.log(output);
 console.log(lists);
 
 
+const numbers = [3, 5, 7, 8, 9, 2, -5];
 
