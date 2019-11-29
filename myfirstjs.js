@@ -44,7 +44,10 @@ const string = '<ul>' + items.join('') + '</ul>';
 console.log(string);
 
 
-// Chaining in JS, we can apply a method upon another method
+//JS, we can apply a method upon another method
+
+// Chaining in JS, we can a method upon another method
+
 const output = sorting
 .filter(n => n >= 0)
 .map(n => ({value: n}))
@@ -76,6 +79,7 @@ console.log(output);
     });
 
 console.log(lists);
+<<<<<<< HEAD
 
 
 const numbers = [3, 5, 7, 8, 9, 2, -5];
@@ -83,3 +87,5 @@ const numbers = [3, 5, 7, 8, 9, 2, -5];
 const output = numbers.reduce((accum, cur) => accum + cur);
 
 console.log(output);
+=======
+>>>>>>> 4bd99f65e7eed287f0da700d62272b5a47d1f260
