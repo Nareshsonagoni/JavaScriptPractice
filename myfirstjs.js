@@ -79,3 +79,13 @@ console.log(output);
     });
 
 console.log(lists);
+<<<<<<< HEAD
+
+
+const numbers = [3, 5, 7, 8, 9, 2, -5];
+// reduce method,
+const output = numbers.reduce((accum, cur) => accum + cur);
+
+console.log(output);
+=======
+>>>>>>> 4bd99f65e7eed287f0da700d62272b5a47d1f260
