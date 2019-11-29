@@ -14,3 +14,14 @@ function countingOccurance(array, element){
     return count;
 
 }
+
+// Using reduce Method.
+function countingOccurance2(array, element){
+    return array.reduce((accum, cur) => {
+        const occurence = (element === cur) ? 1: 0;
+        console.log(accum, cur, element);
+        return accum + occurence;
+    }, 0);
+}
+
+console.log(output5);
