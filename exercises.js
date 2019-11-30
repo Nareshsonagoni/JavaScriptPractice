@@ -66,3 +66,4 @@ const pickMovie = movies
 .map(m => m.title);
 
 console.log(pickMovie);
+
