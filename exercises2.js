@@ -1,4 +1,4 @@
-
+// try and catch -> error
 
 const person = {
     firstName: 'Naresh',
@@ -43,12 +43,41 @@ let color = 'red'; //-> global constant, its scope is golbal, we can access it t
 
 
 function start(){
-    color = 'blue'; //-> local constant, its scope is local, it is only accessible in the block it specified
+    const color = 'blue'; //-> local constant, its scope is local, it is only accessible in the block it specified
+
     // local constants or variable have precedence over the global variables or  constants.
     console.log(color);
 }
 
-start();
-console.log(color);
+// start();
+// console.log(color);
 
 
+// A window object is
+// => All the functions, objects are inside the window object are actually methods inside the window object
+
+// this => keyword:
+
+const video = {
+    title: 'a',
+    tags: ['a', 'b', 'c', 'd'],
+    showTags(){ 
+        this.tags.forEach(tag => console.log(this.title, tag));
+    }
+        // const self = this;
+        // this.tags.forEach(function(tag){
+            //      console.log(self.title, tag);
+            // });
+    // }
+};
+
+// video.showTags();
+
+
+function playVideo(a, b){
+    console.log(this);
+}
+
+playVideo.call({Name: 'Naresh'}, 1, 2);
+playVideo.apply({Name: 'Naresh'}, [1, 2]);
+playVideo.bind({Name: 'Naresh'})();
