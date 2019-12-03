@@ -30,5 +30,25 @@ catch (e){
     alert(e);
 };
 
-console.log(person);
+// console.log(person);
+
+// Scope
+// A scope of the variable or constant determines where that variable or constant accessible.
+
+
+let color = 'red'; //-> global constant, its scope is golbal, we can access it throught the programe
+
+// We should always avoid declaring variables globaly, it will create a mess, and each
+// function can accidentally change the value
+
+
+function start(){
+    color = 'blue'; //-> local constant, its scope is local, it is only accessible in the block it specified
+    // local constants or variable have precedence over the global variables or  constants.
+    console.log(color);
+}
+
+start();
+console.log(color);
+
 
