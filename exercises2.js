@@ -73,11 +73,12 @@ const video = {
 
 // video.showTags();
 
+// adding the elements in an array or numbers
+function sum(...items){
+    if (items.length == 1 && Array.isArray(items[0]))
+        items = [...items[0]];
 
-function playVideo(a, b){
-    console.log(this);
+    return items.reduce((a, b) => a + b);
 }
 
-playVideo.call({Name: 'Naresh'}, 1, 2);
-playVideo.apply({Name: 'Naresh'}, [1, 2]);
-playVideo.bind({Name: 'Naresh'})();
+console.log(sum(1, 2, 5));
