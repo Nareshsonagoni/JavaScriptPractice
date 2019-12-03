@@ -24,7 +24,7 @@ function countingOccurance2(array, element){
     }, 0);
 }
 
-console.log(output5);
+// console.log(output5);
 
 
 function maximum(array){
@@ -65,5 +65,9 @@ const pickMovie = movies
 .reverse()
 .map(m => m.title);
 
-console.log(pickMovie);
+// console.log(pickMovie);
+
+
+
+
 
