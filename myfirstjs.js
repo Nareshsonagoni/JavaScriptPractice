@@ -1,7 +1,7 @@
 const arra = [3, 5, 6];
 
 
-
+// it returns the first element from the array which satisfies the condition.
 let found = arra.find(element => element > 4);
 console.log(found);
 
@@ -31,7 +31,7 @@ let atleastOnePositive = sorting.some(value => value >= 0);
 console.log(allPositive);
 console.log(atleastOnePositive);
 
-// Filter method returns only positive elements in a new array.
+// Filter method returns all the elements which satisfies the condition
 let filtered = sorting.filter(n => n >= 0);
 
 console.log(filtered);
