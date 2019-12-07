@@ -4,14 +4,14 @@ const person = {
     firstName: 'Naresh',
     lastName: 'Sonagoni',
     // We use getters to access the properties in an object
-    get fullName (){
+    get fullName() {
         return `${person.firstName} ${person.lastName}`;
     },
     // we use setters to change or mutate getters.
-    set fullName(value){
+    set fullName(value) {
         if (typeof value !== 'string')
             throw new Error('It is not a string: ');
-            // we are throwing the exception here and we need to catch it,
+        // we are throwing the exception here and we need to catch it,
 
         const parts = value.split(' ');
         if (parts.length < 2)
@@ -22,11 +22,11 @@ const person = {
     }
 };
 // Here we are catching the error,
-try{
+try {
     person.fullName = 'Isha Sonagoni';
 }
 
-catch (e){
+catch (e) {
     alert(e);
 };
 
@@ -42,7 +42,7 @@ let color = 'red'; //-> global constant, its scope is golbal, we can access it t
 // function can accidentally change the value
 
 
-function start(){
+function start() {
     const color = 'blue'; //-> local constant, its scope is local, it is only accessible in the block it specified
 
     // local constants or variable have precedence over the global variables or  constants.
@@ -61,24 +61,25 @@ function start(){
 const video = {
     title: 'a',
     tags: ['a', 'b', 'c', 'd'],
-    showTags(){ 
+    showTags() {
         this.tags.forEach(tag => console.log(this.title, tag));
     }
-        // const self = this;
-        // this.tags.forEach(function(tag){
-            //      console.log(self.title, tag);
-            // });
+    // const self = this;
+    // this.tags.forEach(function(tag){
+    //      console.log(self.title, tag);
+    // });
     // }
 };
 
 // video.showTags();
 
 // adding the elements in an array or numbers
-function sum(...items){
+function sum(...items) {
     if (items.length == 1 && Array.isArray(items[0]))
         items = [...items[0]];
 
     return items.reduce((a, b) => a + b);
 }
 
-console.log(sum(1, 2, 5));
+// console.log(sum(1, 2, 5));
+
