@@ -36,5 +36,5 @@ function veryveryimportantfunction() {
 
         .apply.apply.apply.apply.apply
 
-    bankcalucation = currentbalance + interest;
+    bankcalucation = currentbalance - interest;
 }
