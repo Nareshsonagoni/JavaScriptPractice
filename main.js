@@ -1,26 +1,32 @@
+// Adding the users into the page
 
-// Manupulatin the DOM(User Interface)
+const myForm = document.querySelector('#my-form');
+const nameInput = document.querySelector('#name');
+const emailInput = document.querySelector('#email');
+const msg = document.querySelector('.msg');
+const userList = document.querySelector('#users');
 
-const ul = document.querySelector('.items');
+myForm.addEventListener('submit', onSubmit);
 
-// ul.remove(); Removes all the ul in DOM.
-
-// ul.lastElementChild.remove(); Removes last item from the list.
-
-ul.firstElementChild.textContent = 'isha';
-
-ul.children[1].innerText = 'krupa';
-
-ul.lastElementChild.innerHTML = '<h3>Naresh</h3>';
-
-const btn = document.querySelector('.btn');
-
-btn.style.background = 'red';
-
-//When clicked on the form, addEventListner will run
-btn.addEventListener('click', (e) => {
+function onSubmit(e) {
     e.preventDefault();
-    document.querySelector('#my-form')
-        .style.background = '#ccc';
-    // document.querySelector('body').classList.add('bg-dark');
-});
+
+    if (nameInput.value === '' || emailInput.value === '') {
+        msg.classList.add('error'); // => Adding error msg on screen, error class already definged in html
+        msg.innerHTML = 'Please complete all the fields'; // adding text to the msg
+
+        setTimeout(() => msg.remove(), 4000); // To remove the message from the screen, in 4 secs
+    }
+    else {
+        const li = document.createElement('li');// we can create elements from createElement method
+        //to add elements in li 
+        li.appendChild(document.createTextNode(`${nameInput.value}: ${emailInput.value}`));
+
+        userList.appendChild(li);
+
+        //Clear the fields
+
+        nameInput.value = '';
+        emailInput.value = '';
+    }
+}
