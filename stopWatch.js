@@ -39,8 +39,12 @@ function StopWatch() {
     });
 }
 
+StopWatch.prototype.draw = function () {
+    console.log('draw');
+};
 const sw = new StopWatch();
 
 sw.start();
 sw.stop();
+sw.draw();
 console.log(sw.duration);
