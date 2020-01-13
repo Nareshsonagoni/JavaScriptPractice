@@ -1,2 +1,2 @@
 # JavaScriptPractice
-My JavaScript materials
+This Repo. has all my JavaScript materils.
